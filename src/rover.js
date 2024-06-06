@@ -20,7 +20,7 @@ class Rover {
                 this.moveForward();
             }
             else {
-                console.log(`Instruction invalid ${instruction}`);
+                throw new Error(`Instruction invalid ${instruction}`);
             }
     
         }
@@ -40,8 +40,6 @@ class Rover {
         let newX = this.x;
         let newY = this.y;
 
-        console.log(newX, newY);
-
         if(this.direction == 'N'){
             newY = newY + 1;
         }
@@ -50,20 +48,17 @@ class Rover {
         }
         else if(this.direction == 'E'){
             newX = newX + 1;
-            console.log(newX);
         }
         else if(this.direction == 'W'){
             newX = newX - 1;
         }
-        console.log(newX, newY);
 
         if(this.plateau.isValidPosition(newX, newY)){
-            console.log(this.x, this.y);
             this.x = newX;
             this.y = newY;
         }
         else {
-            console.log(`Position invalid, x: ${newX}, y: ${newY}`);
+            throw new Error(`Position invalid, x: ${newX}, y: ${newY}`);
         }
     }
 
