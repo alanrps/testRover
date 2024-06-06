@@ -18,7 +18,7 @@ LMLMLMLMM
 MMRMMRMRRM
 ```
 
-### Descrição das Linhas
+### Descrição da Entrada
 
 1. **Coordenadas superiores direitas do plateau**: `5 5`
 2. **Posição inicial do rover** em coordenadas (x, y) e sua direção (N, E, S, W): `1 2 N`
@@ -26,11 +26,23 @@ MMRMMRMRRM
 
 Observação: Cada rover possui duas linhas.
 
-## Instruções de Movimentação
+### Instruções de Movimentação
 
 - `L`: Movimenta o rover para a esquerda (left) em um ângulo de 90°, ou seja, gira no sentido anti-horário.
 - `R`: Movimenta o rover para a direita (right) em um ângulo de 90°, ou seja, gira no sentido horário.
 - `M`: Avança um ponto na direção atual.
+
+
+## Saída de dados
+
+### Exemplo de Saída
+
+A saída é representada pelos pontos x, y e a direção final de cada rover
+
+```
+1 3 N
+5 1 E
+```
 
 ## Execução
 
