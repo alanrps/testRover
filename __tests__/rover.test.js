@@ -44,7 +44,7 @@ describe('Rover', () => {
         expect(rover.getFinalPosition()).toBe('5 1 N');
     })
 
-    test('should throw and error for invalid instruction', () => {
+    test('should throw an error for invalid instruction', () => {
         expect(() => rover.runInstructions('A')).toThrow('Instruction invalid A');
     })
 })

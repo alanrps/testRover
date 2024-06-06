@@ -18,6 +18,7 @@ class Utils {
         }
         
         const rovers = []; 
+        // Remove o '\r' do arquivo
         const cleanedText = fileData.replace(/\r/g, '');
         const inputData = cleanedText.trim().split('\n');
         const [width, height] = inputData[0].split(' ').map(value => parseInt(value, 10));
